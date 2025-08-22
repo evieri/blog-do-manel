@@ -1,0 +1,53 @@
+.card-posts {
+    transition: box-shadow 0.3s;
+}
+
+.card-posts:hover {
+    box-shadow: 0 0 20px rgba(10, 10, 10, 0.25);
+}
+
+.inactive-post {
+    position: relative;
+    opacity: 0.5; /* Torna o post semi-transparente */
+}
+
+.inactive-post::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay escuro */
+    z-index: 1;
+    pointer-events: none; /* Permite que os links ainda sejam clicados */
+}
+
+.inactive-post .card-body,
+.inactive-post .card-img-top {
+    z-index: 2; /* Garante que o conteúdo do card fique acima do overlay */
+}
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1055; /* Z-index alto para ficar sobre o conteúdo */
+}
+
+.progress-bar {
+    transition: width 5s linear;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+@media (min-width: 768px) {
+    #pesquisa-users {
+        max-width: 370px
+    }
+}
+/*toast*/
+

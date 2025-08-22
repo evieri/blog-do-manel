@@ -1,0 +1,32 @@
+services:
+  web:
+    image: webdevops/php-apache:7.3
+    container_name: php-apache-container2
+    volumes:
+      - ./:/app
+    ports:
+      - "8090:80"
+    depends_on:
+      - db
+    networks:
+      - casa
+
+  db:
+    image: postgres:15.3
+    container_name: postgres-container2
+    environment:
+      - TZ=America/Sao_Paulo
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=2653
+    volumes:
+      - ./db-data:/data/postgres
+    ports:
+      - "5432:5432"
+
+    networks:
+      - casa
+
+networks:
+  casa:
+    driver: bridge
