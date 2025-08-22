@@ -50,7 +50,6 @@ Um **template completo de blog** desenvolvido com **CakePHP 2.10**, apresentando
 
 ### DevOps
 - **Docker** - Containerização
-- **Docker Compose** - Orquestração de containers
 
 ## 📋 Pré-requisitos
 
@@ -62,8 +61,8 @@ Um **template completo de blog** desenvolvido com **CakePHP 2.10**, apresentando
 
 ### 1. Clone o repositório
 ```bash
-git clone [seu-repositorio]
-cd blog-cakephp-template
+git clone git@github.com:evieri/blog-do-manel.git
+cd blog-do-manel
 ```
 
 ### 2. Execute com Docker
